@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Una Parola al Giorno</string>
+    <string name="widget_label">Parola del giorno</string>
+    <string name="widget_description">Mostra la parola del giorno da unaparolaalgiorno.it, senza aprire il sito</string>
+</resources>

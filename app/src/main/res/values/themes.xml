@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.UnaParola" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">#D92929</item>
+    </style>
+</resources>
