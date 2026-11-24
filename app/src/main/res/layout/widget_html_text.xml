@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  One paragraph of the full article, rendered from HTML (bold/italic/links).
+  Text size is set at runtime from the user's font-scale setting.
+  Serif face + generous line spacing make long text comfortable to read on
+  the widget's red background; links use a soft cream instead of default blue.
+-->
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/html_text_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:fontFamily="serif"
+    android:letterSpacing="0.01"
+    android:lineSpacingMultiplier="1.3"
+    android:paddingBottom="12dp"
     android:textColor="#FFFFFF"
-    android:textSize="14sp" />
+    android:textColorLink="#FFE9C7"
+    android:textSize="15sp" />

@@ -12,7 +12,8 @@ This project is a non-official Android widget for the website [unaparolaalgiorno
 ## Architecture
 - **`WordScraper`**: Handles Jsoup connection and parsing. It extracts metadata (word, syllabication, definition, etc.) and full HTML article content.
 - **`WordRepository`**: The single source of truth. It manages the DataStore cache and triggers refreshes.
-- **`WordWidget`**: Renders the Glance widget. Supports compact and expanded states.
+- **`SettingsRepository`**: DataStore-backed user settings. Holds the text-size multiplier (`font_scale`, 0.8-1.8) chosen from the app; `WordWidget.provideGlance()` reads it on every redraw and all widget text sizes go through `scaled(base, fontScale)`. After changing it, call `WordWidget().updateAll(context)`.
+- **`WordWidget`**: Renders the Glance widget. Supports compact and expanded states. The expanded ("Mostra tutto") state is a `LazyColumn` reading view: title, significato, etimologia/esempio cards, then the article as one `AndroidRemoteViews` item per paragraph (`widget_html_text.xml`: serif, 1.3 line spacing, cream links), then a footer.
 - **`WordRefreshWorker`**: Periodically updates the word in the background.
 
 ## Coding Guidelines
